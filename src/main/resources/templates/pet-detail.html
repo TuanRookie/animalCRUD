@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Pet</title>
+</head>
+<body>
+<div class="row">
+  <h1>Pet</h1>
+</div>
+<form th:object="${pet}" th:action="@{save/{ide}(ide=${pet.id})}"
+      th:method="${id} < 0 ? POST : PUT"
+>
+  ID: <input type="number" name="bookcode" th:value="${pet.id}"><br />
+  Name: <input type="text" name="name" th:value="${pet.name}"><br />
+  Species: <input type="text" name="species" th:value="${pet.species}"><br />
+  Age: <input type="text" name="age" th:value="${pet.age}"><br />
+  Neutered: <input type="checkbox" name="neutered" th:checked="${pet.neutered}"><br />
+  <input type="submit" value="Save Pet">
+</form>
+</body>
+</html>
