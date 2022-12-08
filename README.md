@@ -1,3 +1,0 @@
-# animalCrud
-Spring boot
-themleaf
